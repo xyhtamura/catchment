@@ -2,32 +2,33 @@
 
 **Play: [xyhtamura.github.io/catchment](https://xyhtamura.github.io/catchment/)**
 
-A particle catcher. Things fall from above with their letters on them, and the
-catcher is a detector aperture with three settings — charge, parity, spin. It
-takes a particle only when all three agree with it.
+A particle catcher. Particles fall from above with species symbols, and the
+catcher is a detector aperture with three settings — charge, parity, and spin.
+It absorbs a particle only when all three settings match.
 
-The field is magnetic, so a charged track travels an arc whose radius is its
-momentum: positives bend one way, negatives the other, neutrals fall straight.
-The bend tells you what something is before its letter is legible, which is how
-a real tracker reads the sign of a charge.
+The magnetic field curves charged particle tracks based on momentum: positive
+particles curve left, negative particles curve right, and neutral particles fall
+straight. This curvature identifies charge sign and momentum visually before the
+letter label is legible.
 
-The three quantum numbers are drawn as three visual channels — **charge is
-colour, parity is fill, spin is shape** — and the catcher is drawn with its own
-current setting, so lining up is a comparison of two pictures rather than of two
-triples of numbers.
+The three quantum numbers map to three visual channels: **charge determines
+colour, parity determines fill, and spin determines shape**. The catcher
+displays its active setting, allowing players to match incoming particles by
+comparing visual glyphs directly.
 
-What you absorb goes into a stack, where the measured tables take over. Held
-particles decay on their own clock and their pieces stay inside. Matter meets
-antimatter and annihilates; two photons make a pair; a proton and a neutron
-bind. Decay fills the stack, reactions empty it, and reaction products are
-thrown back up the field to be caught again. Hold more than six and the next
-catch is a pile-up — two events in one readout window, neither reconstructable.
+Absorbed particles enter a stack governed by particle data tables. Unstable
+particles decay on compressed lifetimes and leave decay products in the stack.
+Complementary particles annihilate, high-energy photon pairs generate matter,
+and nucleons bind into nuclei. Decay increases stack occupancy whereas
+reactions reduce it, ejecting reaction products back into the field to extend
+catch multiplier chains. Absorbing a particle when the stack is full triggers a
+pile-up, where overlapping events in a single readout window prevent
+reconstruction and discard all held particles.
 
-Nothing here catches a neutrino. Parity is not defined for one, so there is no
-value on that dial to match, and every neutrino that crosses the plane leaves as
-missing energy. The free-quark counter reads zero permanently, for a related
-reason: a quark knocked loose is on a string that breaks into a new pair before
-it arrives, so what the beam delivers is a jet of hadrons.
+Neutrinos cannot be caught because they lack a definite parity state, leaving the
+detector plane as missing energy. Similarly, colour confinement prevents free
+quarks from reaching the detector; stretching gluon strings fragment into hadron
+jets, keeping the free-quark counter at zero.
 
 ## Controls
 

@@ -1,9 +1,9 @@
 # Catchment — notes
 
-A particle catcher. Things fall from above with their letters on them, and the
-catcher is a detector aperture with three settings — charge, parity, spin. It
-takes a particle only when all three agree with it and the particle lands inside
-its width.
+A particle catcher. Particles fall from above with species symbols, and the
+catcher is a detector aperture with three settings — charge, parity, and spin.
+It absorbs a particle only when all three settings match and the particle lands
+inside its width.
 
 **Its own repository**, published at `xyhtamura.github.io/catchment/`. It runs
 in two places off one codebase: a web game driven by a pointer, and a
@@ -79,18 +79,19 @@ about reflexes.
 An absorbed particle enters the **stack** — the detector's active volume — and
 the tables take over there:
 
-- **Decay fills it.** A held particle runs its own clock and its products stay
-  inside, so `π⁰ → γ γ` and `n → p e⁻ ν̄ₑ` turn one occupant into two. Neutrinos
-  walk straight out and are only ever missing energy.
-- **Reactions empty it.** Annihilation, binding and pair production each consume
-  two occupants and throw their products back up the field, where they can be
-  caught again for a chain multiplier.
+- **Decay adds occupants.** Unstable particles decay after set lifetimes and
+  leave decay products in the stack (for example, `π⁰ → γ γ` and `n → p e⁻ ν̄ₑ`
+  convert one held particle into multiple products). Emitted neutrinos escape
+  the detector volume as missing energy.
+- **Reactions consume occupants.** Annihilation, binding, and pair production
+  consume two held particles and launch reaction products back into the field,
+  where catching them extends the multiplier chain.
 
-Fill the stack past six and the next absorption is a **pile-up**: two events
-inside one readout window, neither reconstructable, the chain broken and
-everything held written off. Pile-up is the only punishment. Missing a particle
-is not one — a detector missing things is the normal condition, and the readout
-measures it rather than penalising it.
+Exceeding the stack capacity of six causes a **pile-up**: overlapping events in
+one readout window prevent reconstruction, resetting the chain and clearing all
+held particles as missing energy. Missing a particle is not penalised; the
+readout tracks missed particles as normal detector inefficiency rather than
+deducting score.
 
 ## Continuous, and what that bought
 
@@ -135,9 +136,9 @@ a species appears — falling, held in the stack, in the legend, on the title
 roster — goes through one `token()` function, so the three channels cannot
 disagree between one part of the screen and another.
 
-One channel is not a free choice. **A neutrino is drawn with a dashed edge,
-neither filled nor outlined, because it has no parity to be either** — and that
-is the same fact that means nothing can be tuned to take one.
+One channel is fixed by physics: **a neutrino is drawn with a dashed border
+because it lacks a definite parity state**, matching the constraint that
+prevents any catcher setting from tuning to it.
 
 ## Two control profiles
 
@@ -513,3 +514,5 @@ immediately found the field strong enough to curl low-energy particles out of
 the apparatus before they landed. **The panel is still the open item**, and the
 light palette in particular was chosen on a monitor and has never been seen on
 the glass it is for.*
+
+*2026-09-03 (voice pass) — Antigravity — Refactored user-facing and reference text in cards.js, modelcard.js, README.md, and NOTES.md to reduce overly poetic "X, Y" parataxis and formulaic pairings (e.g. serial aphorisms, balanced binary clauses, and biblical conditional rhythms). Replaced with explicit functional relations and causal mechanics. Verified headless suite via `node tools/check-table.mjs` (all checks passing).*
